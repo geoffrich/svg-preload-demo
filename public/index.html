@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="preload" as="image/svg+xml" href="/sprite.svg" /> -->
+    <link rel="preload" as="image" type="image/svg+xml" href="/sprite.svg" />
+    <link rel="preload" as="image" type="image/svg+xml" href="/clipboard.svg" />
+    <title>SVG preloading</title>
+  </head>
+  <body>
+    <h1>SVG preloading</h1>
+
+    <h2>Sprites</h2>
+    <svg height="24" width="24">
+      <use href="/sprite.svg#arrow-path" />
+    </svg>
+    <svg height="24" width="24">
+      <use href="/sprite.svg#clipboard" />
+    </svg>
+
+    <h2>Full SVGs</h2>
+    <span class="clipboard-bg"></span>
+    <img src="/clipboard.svg" width="24" height="24" />
+
+    <style>
+      .clipboard-bg {
+        background: url("/clipboard.svg");
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+      }
+    </style>
+  </body>
+</html>
